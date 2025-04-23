@@ -1,0 +1,28 @@
+{
+  "name": "@a4smanjorg5/invoida",
+  "version": "1.0.0",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "repository": "a4smanjorg5/js-invoida",
+  "author": "a4smanjorg5",
+  "license": "MIT",
+  "scripts": {
+    "build": "run-s build:* build-fin",
+    "build-fin": "echo {\"type\":\"module\"}> dist/esm/package.json",
+    "build:types": "tsc -p ./tsconfig/types.json",
+    "build:cjs": "tsc -p ./tsconfig/cjs.json",
+    "build:esm": "tsc -p ./tsconfig/esm.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cborg": "^1.10.2",
+    "glob": "^10.4.5",
+    "jose": "^4.15.9"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "npm-run-all2": "^7.0.2",
+    "typescript": "^5.8.3"
+  }
+}
