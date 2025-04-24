@@ -1,0 +1,16 @@
+{
+  "files": ["./src/index.ts"],
+  "compilerOptions": {
+    "target": "es2020",
+    "lib": ["ES2020"],
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "removeComments": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  }
+}
