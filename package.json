@@ -1,0 +1,11 @@
+{
+  "name": "js-invoida-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^18",
+    "typescript": "~5.7.2"
+  }
+}

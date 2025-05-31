@@ -1,0 +1,40 @@
+{
+  "name": "@a4smanjorg5/invoida",
+  "version": "1.0.0",
+  "keywords": [
+    "invoida",
+    "jwt",
+    "es256",
+    "cryptosign",
+    "signer-core"
+  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "repository": "a4smanjorg5/js-invoida",
+  "bugs": {
+    "url": "https://github.com/a4smanjorg5/js-invoida/issues"
+  },
+  "author": "a4smanjorg5",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "run-s build:* build-fin",
+    "build-fin": "echo {\"type\":\"module\"}> dist/esm/package.json",
+    "build:types": "tsc -p ./tsconfig/types.json",
+    "build:cjs": "tsc -p ./tsconfig/cjs.json",
+    "build:esm": "tsc -p ./tsconfig/esm.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "glob": "^10.4.5",
+    "jose": "^4.15.9"
+  },
+  "devDependencies": {
+    "@types/node": "^18",
+    "npm-run-all2": "^7.0.2",
+    "typescript": "~5.7.2"
+  }
+}
