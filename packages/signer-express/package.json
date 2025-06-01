@@ -1,0 +1,22 @@
+{
+  "name": "signer-express",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": "a4smanjorg5/js-invoida",
+  "author": "a4smanjorg5",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@a4smanjorg5/invoida": "^1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5",
+    "typescript": "~5.7.2"
+  }
+}
