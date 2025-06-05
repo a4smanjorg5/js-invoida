@@ -70,7 +70,7 @@ export const removeKeyPair = (kid: string) => Promise.all([
  * @returns {Promise<string>} A promise that resolves to the compact JWS (JSON Web Signature) string.
  */
 export const sign = async <T>(payload: Record<string, T>, kid: string) =>
-  new CompactSign(encodeObj({ iat: Date.now(), ...payload }))
+  new CompactSign(encodeObj({ iat: Math.floor(Date.now() / 1000), ...payload }))
   .setProtectedHeader({ alg: 'ES256', kid })
   .sign(await importPKCS8('' + await readFile(pathToKeysDir(kid + '.pem')), 'ES256'))
 
