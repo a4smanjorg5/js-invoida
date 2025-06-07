@@ -157,10 +157,13 @@ const VerifyScanner = (props: Mutation<VerificationFeedback, string>) => {
   }, [])
 
   return (
-    <Scanner
-      onScan={startVerify}
-      paused={paused}
-    />
+    <>
+      <Scanner
+        onScan={startVerify}
+        paused={paused}
+      />
+      {props.isPending && <div className={styles.mt3 || styles['mt-3']}>Verifying...</div>}
+    </>
   )
 }
 

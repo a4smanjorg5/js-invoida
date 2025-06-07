@@ -33,9 +33,9 @@ const App = ({ portable }: { portable: boolean }) => {
 
   return (
     <Accordion activeKey={state?.name} onSelect={handleSelect}>
-      {Object.keys(sitemap).filter(keyState =>
+      {(Object.keys(sitemap) as KeyState[]).filter(keyState =>
         keyState != MANAGEMENT_PORT || portable
-      ).map((id: KeyState) =>
+      ).map(id =>
         <Accordion.Item key={id} {...events[id]} eventKey={id} >
           <Accordion.Header>{sitemap[id].name}</Accordion.Header>
           <Accordion.Body>
@@ -72,6 +72,7 @@ const main = ({
 export const appName = 'Invoida'
 
 export const favicon = Object.freeze({
+  // @ts-ignore
   href: (digsign.src || digsign) as string,
   type: 'image/svg+xml',
 })

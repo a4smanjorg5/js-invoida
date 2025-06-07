@@ -11,7 +11,7 @@ import { useAppVariables } from '../contexts/app'
 import { useHistory } from '../contexts/history'
 import { useSectionName } from '../contexts/section'
 import { useTransition } from '../contexts/transition'
-import { Mutation } from '../helpers'
+import { type Mutation } from '../helpers'
 import HttpAct from './HttpAct'
 import { type SignRequest } from './helpers'
 
@@ -79,6 +79,7 @@ const Signer = () => {
       <HttpAct
         name={stateType}
         params={params}
+        // @ts-ignore
         Mutation={Mutation}
         onAction={transform}
         onSuccess={showJWT}

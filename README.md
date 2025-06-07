@@ -17,7 +17,8 @@ Invoida is an open-source platform for building secure, verifiable electronic do
 |------------------------|-------------------------------------------|
 | `@a4smanjorg5/invoida` | Core signing and key management utilities |
 | `signer-express`       | Signing and key management app-express    |
-| *(more coming soon)*   | App, verifiers, UI, etc.                  |
+| `@/invoida-components` | See `packages/components`                 |
+| `frontend`             | App, verifiers, UI, etc.                  |
 
 ## License
 MIT &copy; a4smanjorg5
