@@ -18,5 +18,12 @@ export default defineConfig(env => ({
     },
   },
   resolve: { alias: { '@': resolve(__dirname, './src') } },
+  build: { rollupOptions: {
+    output: { manualChunks(id) {
+      if (id.includes('node_modules')) {
+        return id.match(/node_modules\/([^\/])/)?.[1]
+      }
+    } }
+  } },
   plugins: [react()],
 }))
