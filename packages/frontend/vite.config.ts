@@ -19,6 +19,10 @@ export default defineConfig(env => ({
   },
   resolve: { alias: { '@': resolve(__dirname, './src') } },
   build: { rollupOptions: {
+    input: [
+      '@a4smanjorg5/invoida-components/App',
+      '@a4smanjorg5/invoida-components/Loading',
+    ],
     output: { manualChunks(id) {
       if (id.includes('node_modules')) {
         return id.match(/node_modules\/([^\/])/)?.[1]
